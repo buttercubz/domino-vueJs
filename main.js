@@ -8,7 +8,5 @@ const app = new Vue({
         string: '',
         total: 10,
         mensage: 'Hecho con amor por Erick'
-    },
-    methods: {
     }
 });

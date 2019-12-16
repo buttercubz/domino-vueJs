@@ -18,14 +18,14 @@
                 <h4>
                     {{puntos.nombre}}
                 </h4>
-                <input type="number" class="form form-control" v-model.number="puntos.total" min="0" @keyup.enter="puntos.res += puntos.total">
+                <input type="number" class="form form-control" v-model.number="puntos.total" min="0" @keyup.enter="puntos.res += puntos.total, puntos.total = 0">
                 <button @click="puntos.res > 0 ? puntos.res-- : puntos.res = 0" class="btn btn-danger">
                     less
                 </button>
-                <button @click="puntos.res += puntos.total" class="btn btn-success">
+                <button @click="puntos.res += puntos.total, puntos.total = 0" class="btn btn-success">
                     more
                 </button>
-                    <h4> {{puntos.res}} </h4>
+                    <h4>puntos {{puntos.res}} </h4>
             </li>
         </ul>
         <div class="container">
