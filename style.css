@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 10px;
+}
+
+.test {
+    background-color: #099009;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+h1 {
+    padding: 10px;
+}

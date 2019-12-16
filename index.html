@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/663b787d15.js" crossorigin="anonymous"></script>
+    <title>vue js</title>
+</head>
+<body class="bg-dark">
+    <div id="app" class="container">
+        <h1 :class="['test']" > {{test}} <i class="fas fa-ghost"></i></h1>
+        <ul>
+            <li v-for="puntos of jugadores" class="text-white">
+                <h4>
+                    {{puntos.nombre}}
+                </h4>
+                <input type="number" class="form form-control" v-model.number="puntos.total" min="0">
+                <button @click="puntos.res > 0 ? puntos.res-- : puntos.res = 0" class="btn btn-danger">
+                    less
+                </button>
+                <button @click="puntos.res += puntos.total" class="btn btn-success">
+                    more
+                </button>
+                    <h4> {{puntos.res}} </h4>
+            </li>
+        </ul>
+        <div class="container">
+            <span class="text-white">{{mensage}} <i class="fas fa-heart"></i></span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
